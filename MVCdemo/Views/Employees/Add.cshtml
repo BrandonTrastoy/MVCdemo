@@ -1,0 +1,31 @@
+﻿@{
+	@model MVCdemo.Models.AddEmployeeViewModel
+
+}
+
+<h1>Add Employee</h1>
+
+<form method="post" action="Add">
+	<div class="mb-3">
+		<label for="name" class="form-label">Name</label>
+		<input id="name" type="text" class="form-control" asp-for="Name">
+	</div>
+	<div class="mb-3">
+		<label for="email" class="form-label">Email</label>
+		<input id="email" type="email" class="form-control" asp-for="Email">
+	</div>
+	<div class="mb-3">
+		<label for="salary" class="form-label">Salary</label>
+		<input id="salary" type="number" class="form-control" asp-for="Salary">
+	</div>
+	<div class="mb-3">
+		<label for="dob" class="form-label">Date of Birth</label>
+		<input id="dob" type="date" class="form-control" asp-for="DateOfBirth">
+	</div>
+	<div class="mb-3">
+		<label for="department" class="form-label">Department</label>
+		<input id="department" type="text" class="form-control" asp-for="Department">
+	</div>
+
+	<button type="submit" class="btn btn-primary" >Submit</button>
+</form>

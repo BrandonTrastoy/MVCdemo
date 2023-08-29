@@ -1,0 +1,45 @@
+﻿@model List<MVCdemo.Models.Domain.Employee>
+
+@{
+}
+
+<style>
+	th {
+		padding-right:10px;
+	}
+
+	td {
+		padding-right: 10px;
+	}
+</style>
+
+
+<h1>Employees</h1>
+
+<table>
+	<thead>
+		<tr>
+			@*<th>Id</th>*@
+			<th>Name</th>
+			<th>Email</th>
+			<th>Salary</th>
+			<th>Date of Birth</th>
+			<th>Department</th>
+			<th> </th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var employee in Model)
+		{
+			<tr>
+				@*<td>@employee.Id</td>*@
+				<td>@employee.Name</td>
+				<td>@employee.Email</td>
+				<td>@employee.Salary</td>
+				<td>@employee.DateOfBirth</td>
+				<td>@employee.Department</td>
+				<td><a href="Employees/View/@employee.Id">View</a></td>
+			</tr>
+		}
+	</tbody>
+</table>
